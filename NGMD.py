@@ -83,7 +83,6 @@ class NGMD:
         plt.show()
 
     def evaluate(self, metric='silhouette_score'):
-
         if metric == 'silhouette_score':
             score = silhouette_score(self.X, self.labels)
         elif metric == 'davies_bouldin_score':
