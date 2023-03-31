@@ -20,25 +20,31 @@ class NGMD:
         return np.sqrt(np.sum((a - b)**2))
     
     def farthest_distance(self):
+
         farthest_dist = 0
+
         for i in range(len(self.X)):
             for j in range(i+1, len(self.X)):
                 dist = self.distance(self.X[i], self.X[j])
                 if dist > farthest_dist:
                     farthest_dist = dist
+
         return farthest_dist
     
     def calculate(self):
+
         num_clusters = len(set(self.labels))
         centroids = []
         for i in range(num_clusters):
             cluster_points = self.X[self.labels == i]
             centroids.append(np.mean(cluster_points, axis=0))
         centroid_distances = []
+
         for i in range(num_clusters):
             for j in range(i+1, num_clusters):
                 dist = self.distance(centroids[i], centroids[j])
                 centroid_distances.append(dist)
+
         geo_mean = np.prod(centroid_distances) ** (1.0 / len(centroid_distances))
         max_dist = self.farthest_distance()
         ngmd = geo_mean / max_dist
@@ -83,6 +89,11 @@ class NGMD:
         plt.show()
 
     def evaluate(self, metric='silhouette_score'):
+        '''
+        1. Silhouette score:
+        2. Davies Bouldin score
+        3. Calinski Harabasz score
+        '''
         if metric == 'silhouette_score':
             score = silhouette_score(self.X, self.labels)
         elif metric == 'davies_bouldin_score':
@@ -100,3 +111,4 @@ class NGMD:
         labels_new = kmeans.predict(X_new)
         
         return labels_new
+
