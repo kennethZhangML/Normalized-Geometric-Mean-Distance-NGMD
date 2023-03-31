@@ -12,7 +12,7 @@ Let $X$ be a dataset with n data points, and let $C$ be a clustering of $X$ into
 
 The normalized geometric mean distance (NGMD) is defined as:
 
-NGMD = $(\frac{1}{max_{dist}) * (prod(d(ci, cj))^(\frac{1}{((k*(k-1))/2)})$
+NGMD = \frac{1}{max_{dist}} \cdot \left(\prod_{i=1}^{k-1} \prod_{j=i+1}^{k} d(c_i, c_j) \right)^{\frac{1}{\frac{k(k-1)}{2}}}
 
 where max_dist is the maximum pairwise distance between data points in X, and the product is taken over all pairs of distinct clusters $(i, j)$ such 
 that $i < j$.
