@@ -8,7 +8,7 @@ A lower NGMD value indicates that the clustering algorithm has produced a better
 Therefore, NGMD can be an important tool in evaluating clustering algorithms and comparing different clustering solutions.
 
 # Mathematical Intuition
-Let X be a dataset with n data points, and let C be a clustering of X into k clusters. Let ci be the centroid of cluster i, and let d(ci, cj) be the Euclidean distance between centroids ci and cj.
+Let X be a dataset with n data points, and let C be a clustering of X into k clusters. Let ci be the centroid of cluster i, and let $d(ci, cj)$ be the Euclidean distance between centroids ci and cj.
 
 The normalized geometric mean distance (NGMD) is defined as:
 
