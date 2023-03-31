@@ -17,8 +17,7 @@ $NGMD = (1/max_{dist}) * (prod(d(ci, cj))^{((1/((k*(k-1))/2)))}$
 where max_dist is the maximum pairwise distance between data points in X, and the product is taken over all pairs of distinct clusters $(i, j)$ such 
 that $i < j$.
 
-Proof:
-
+#** Proof and Intuition: **
 Normalization: The NGMD metric is normalized by the maximum pairwise distance between data points in $X$, denoted by $max_dist$. This ensures that the metric is independent of the scale of the data, and allows for comparison of clustering results across datasets with different ranges of values.
 
 Geometric mean: The NGMD metric takes the geometric mean of pairwise distances between cluster centroids. This measure of central tendency is more robust to outliers than the arithmetic mean, and gives equal weight to all pairwise distances, ensuring that each cluster contributes equally to the metric.
