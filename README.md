@@ -1,4 +1,4 @@
-# Normalized-Geometric-Mean-Distance-NGMD
+# Normalized Geometric Mean Distance NGMD
 Normalized Geometric Mean Distance (NGMD) - Unique Clustering Metric
 
 The NGMD metric provides a measure of the quality of clustering by calculating the geometric mean of the pairwise distances between the centroids of the clusters, 
